@@ -1,6 +1,6 @@
 package problema3;
 
-public class PAC extends Entrega {
+public class PAC implements Entrega {
     
     @Override
     public double getValorEntrega(Pedido pedido) throws TipoEntregaInvalida {

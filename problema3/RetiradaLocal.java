@@ -1,6 +1,6 @@
 package problema3;
 
-public class RetiradaLocal extends Entrega {
+public class RetiradaLocal implements Entrega {
 
     @Override
     public double getValorEntrega(Pedido pedido) throws TipoEntregaInvalida {

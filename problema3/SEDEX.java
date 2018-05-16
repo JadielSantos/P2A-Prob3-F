@@ -1,6 +1,6 @@
 package problema3;
 
-public class SEDEX extends Entrega {
+public class SEDEX implements Entrega {
 
     @Override
     public double getValorEntrega(Pedido pedido) {
