@@ -2,6 +2,18 @@ package problema3;
 
 public class Motoboy implements Entrega {
 
+    public static Motoboy motoboy;
+
+    private Motoboy() {
+    }
+
+    public static Motoboy getInstance() {
+        if (motoboy == null) {
+            motoboy = new Motoboy();
+        }
+        return motoboy;
+    }
+    
     @Override
     public double getValorEntrega(Pedido pedido) throws TipoEntregaInvalida {
         int peso = pedido.getTotalPeso();

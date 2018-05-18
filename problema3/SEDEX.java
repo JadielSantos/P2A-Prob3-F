@@ -2,10 +2,22 @@ package problema3;
 
 public class SEDEX implements Entrega {
 
+    public static SEDEX sedex;
+
+    private SEDEX() {
+    }  
+    
+    public static SEDEX getInstance() {
+        if (sedex == null) {
+            sedex = new SEDEX();
+        }
+        return sedex;
+    }
+
     @Override
     public double getValorEntrega(Pedido pedido) {
         int peso = pedido.getTotalPeso();
-        if  (peso <= 500) {
+        if (peso <= 500) {
             return 12.50;
         } else if (peso <= 750) {
             return 20.00;
@@ -16,5 +28,5 @@ public class SEDEX implements Entrega {
         } else {
             return 45.00 + (Math.ceil((peso - 2000) / 100.0) * 1.5);
         }
-    }    
+    }
 }

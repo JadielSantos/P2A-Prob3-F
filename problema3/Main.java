@@ -10,19 +10,19 @@ public class Main {
         itens.add(new ItemPedido(new Produto("Resma", 200.0, 1), 1));
         itens.add(new ItemPedido(new Produto("Caderno", 20, 24000), 1));        
         pedido.setItens(itens);
-        pedido.setTipoEntrega(new PAC());
+        pedido.setTipoEntrega(PAC.getInstance());
         System.out.println(pedido.getValorEntrega());
         System.out.println(pedido.getValorTotal());
         System.out.println(pedido.getTotalPeso());
         
         System.out.println("-----------------");
-        pedido.setTipoEntrega(new SEDEX());
+        pedido.setTipoEntrega(SEDEX.getInstance());
         System.out.println(pedido.getValorEntrega());
         System.out.println(pedido.getValorTotal());
         System.out.println(pedido.getTotalPeso());
         
         System.out.println("-----------------");
-        pedido.setTipoEntrega(new Motoboy());
+        pedido.setTipoEntrega(Motoboy.getInstance());
         System.out.println(pedido.getValorEntrega());
         System.out.println(pedido.getValorTotal());
         System.out.println(pedido.getTotalPeso());

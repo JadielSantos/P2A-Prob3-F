@@ -2,6 +2,18 @@ package problema3;
 
 public class PAC implements Entrega {
     
+    public static PAC pac;
+
+    private PAC() {
+    }
+    
+    public static PAC getInstance() {
+        if (pac == null) {
+            pac = new PAC();
+        }
+        return pac;
+    }
+    
     @Override
     public double getValorEntrega(Pedido pedido) throws TipoEntregaInvalida {
         int peso = pedido.getTotalPeso();
