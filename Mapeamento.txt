@@ -1,0 +1,5 @@
+Em relação ao padrão Strategy temos a interface “Entrega” que possui o método getValorEntrega(), que no contexto ela á Strategy do padrão. 
+
+As classes “PAC, Motoboy, SEDEX, RetiradaNoLocal” são as concrete strategy do padrão, que implementam a interface “Entrega” e são elas que fazem o cálculo do valor de entrega utilizando o método getValorEntrega(). 
+
+Essas mesmas classes utilizam o padrão singleton, pois não é necessário ter várias instancias desses objetos, sendo assim o construtor delas é privado e utilizam o método getInstance() que retorna o objeto para realizar o calculo.
