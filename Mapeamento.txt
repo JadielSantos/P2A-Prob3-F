@@ -1,5 +1,11 @@
-Em relação ao padrão Strategy temos a interface “Entrega” que possui o método getValorEntrega(), que no contexto ela á Strategy do padrão. 
+--> Prof. Marcel: ParabÃ©ns!
 
-As classes “PAC, Motoboy, SEDEX, RetiradaNoLocal” são as concrete strategy do padrão, que implementam a interface “Entrega” e são elas que fazem o cálculo do valor de entrega utilizando o método getValorEntrega(). 
+Em relaÃ§Ã£o ao padrÃ£o Strategy temos a interface â€œEntregaâ€ que possui o mÃ©todo getValorEntrega(), que no contexto ela Ã¡ Strategy do padrÃ£o. 
 
-Essas mesmas classes utilizam o padrão singleton, pois não é necessário ter várias instancias desses objetos, sendo assim o construtor delas é privado e utilizam o método getInstance() que retorna o objeto para realizar o calculo.
+As classes â€œPAC, Motoboy, SEDEX, RetiradaNoLocalâ€ sÃ£o as concrete strategy do padrÃ£o, que implementam a interface â€œEntregaâ€ e sÃ£o elas que fazem o cÃ¡lculo do valor de entrega utilizando o mÃ©todo getValorEntrega(). 
+
+Essas mesmas classes utilizam o padrÃ£o singleton, pois nÃ£o Ã© necessÃ¡rio ter vÃ¡rias instancias desses objetos, sendo assim o construtor delas Ã© privado e utilizam o mÃ©todo getInstance() que retorna o objeto para realizar o calculo.
+
+--> Prof. Marcel: Na classe Pedido nÃ£o deveria existir o atributo peso, pois este Ã© resultado de um cÃ¡lculo. Observem que o mÃ©todo getPesoTotal ignora completamente este atributo.
+
+--> Prof. Marcel: Nota 3,0
